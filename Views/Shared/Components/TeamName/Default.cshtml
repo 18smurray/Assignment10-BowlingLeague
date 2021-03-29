@@ -12,7 +12,13 @@
 @foreach (var x in Model)
 {
     //Asp-route- = puts argument in the url as a way to pass data, to be used for filtering in controller and endpoints
-    <a class="btn btn-block @(x.TeamName == ViewBag.SelectedTeam ?  "btn-primary" : "btn-outline-secondary")" asp-action="Index" asp-controller="Home" asp-route-teamnameid="@x.TeamId" asp-route-teamname="@x.TeamName">@x.TeamName</a>
+    <a class="btn btn-block @(x.TeamName == ViewBag.SelectedTeam ?  "btn-primary" : "btn-outline-secondary")" 
+       asp-action="Index" 
+       asp-controller="Home" 
+       asp-route-teamnameid="@x.TeamId" 
+       asp-route-teamname="@x.TeamName"
+       asp-route-pagenum=1>
+    @x.TeamName</a>
 }
 
 <!--

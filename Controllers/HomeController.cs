@@ -24,7 +24,7 @@ namespace Assignment10.Controllers
 
         //Receives the teamnameid and teamname parameter through the url - set up in the view component asp-route-teamname attribute
         //Pass pagenum as parameter - default is 0; can ref through url using /?pageNum=3
-        public IActionResult Index(long? teamnameid, string teamname, int pageNum = 0)
+        public IActionResult Index(long? teamnameid, string teamname, int pageNum = 1)
         {
             int pageSize = 5;
 
